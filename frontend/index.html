@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Similarity Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-5xl font-bold text-white">Image Similarity Search</h1>
+            <p class="text-gray-400 mt-2">Built with C (k-d tree) & PyTorch (MobileNetV2)</p>
+        </header>
+
+        <main>
+            <section class="max-w-xl mx-auto mb-12">
+                <div class="flex">
+                    <input type="number" id="imageIdInput" class="w-full bg-gray-800 text-white p-3 rounded-l-lg border-2 border-gray-700 focus:outline-none focus:border-blue-500" placeholder="Enter Image ID (0-4999)">
+                    <button id="searchButton" class="bg-blue-600 hover:bg-blue-700 p-3 px-6 rounded-r-lg font-bold transition-colors">Find Similar</button>
+                </div>
+            </section>
+
+            <section id="results" class="min-h-[250px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center">
+                <div class="text-gray-500 col-span-2">Enter an ID to start a search</div>
+            </section>
+
+            <section class="mt-16">
+                <h2 class="text-2xl font-bold text-center mb-4 text-white">3D Visualization of Image Clusters (t-SNE)</h2>
+                <div id="3d-plot" class="w-full h-[600px] bg-gray-800/50 rounded-lg">
+                    </div>
+            </section>
+            
+            <section class="mt-16">
+                <h2 class="text-2xl font-bold text-center mb-4 text-white">K-D Tree Visualization (Conceptual 2D)</h2>
+                <div id="tree-vis" class="flex justify-center bg-gray-800/50 rounded-lg p-4 max-w-2xl mx-auto">
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

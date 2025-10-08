@@ -1,0 +1,73 @@
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.95)), url('assets/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #111827;
+}
+
+.card {
+    background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800/50 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 1.5rem; /* p-6 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#searchButton, .card {
+    transition: all 0.3s ease-in-out;
+}
+
+#searchButton:hover, .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); /* blue glow on hover maybe? */
+}
+
+img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+/* Style for the D3 visualization SVG container */
+#tree-vis svg {
+    width: 100%;
+    height: auto;
+}
+
+/* simple fade-in animation for when results appear */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* spinner animation for loading state */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #4b5563; /* gray-600 */
+    border-bottom-color: #3b82f6; /* blue-500 */
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
