@@ -1,5 +1,19 @@
 # High-Performance Image Similarity Search Engine
 
+<p align="center">
+  <img src="https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=white" alt="C"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white" alt="Scikit-learn"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
+  <img src="https://img.shields.io/badge/D3.js-F9A03C?logo=d3dotjs&logoColor=white" alt="D3.js"/>
+  <img src="https://img.shields.io/badge/Plotly.js-3F4F75?logo=plotly&logoColor=white" alt="Plotly.js"/>
+  <img src="https://img.shields.io/badge/Make-427CAC?logo=gnu-make&logoColor=white" alt="Make"/>
+  <img src="https://img.shields.io/badge/Git_LFS-423C3A?logo=git-lfs&logoColor=white" alt="Git LFS"/>
+</p>
+
 ![Project Demo](assets/demo.gif)
 
 A full-stack application that finds visually similar images from a large dataset using a custom high-performance C backend and an interactive web frontend. This project demonstrates a powerful combination of low-level data structures, modern machine learning pipelines, and web-based data visualization.
@@ -118,3 +132,4 @@ Open your web browser and navigate to: **`http://localhost:8000`**
 -   **Image Upload:** Allow users to upload their own image for querying instead of using an ID.
 -   **K-Nearest Neighbors:** Extend the algorithm to find and display the top *K* similar images.
 -   **Index Comparison:** Implement other spatial data structures (like VP-Trees) to compare performance against the k-d tree.
+
